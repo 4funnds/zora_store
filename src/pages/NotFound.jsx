@@ -3,22 +3,22 @@ import { Helmet } from 'react-helmet';
 
 const NotFound = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center bg-beige/50 py-12 px-4 sm:px-6 lg:px-8">
       <Helmet>
         <title>Page Not Found | Zora Fashion</title>
       </Helmet>
       <div className="max-w-md w-full space-y-8 text-center">
         <div>
-          <h1 className="text-9xl font-bold text-primary">404</h1>
-          <h2 className="mt-6 text-3xl font-bold text-secondary">Page not found</h2>
-          <p className="mt-2 text-gray-600">
+          <h1 className="text-9xl font-bold text-deep-blue font-[sora]">404</h1>
+          <h2 className="mt-6 text-3xl font-bold font-[montserrat] text-deep-blue">Page not found</h2>
+          <p className="mt-2 text-deep-blue">
             Sorry, we couldn't find the page you're looking for.
           </p>
         </div>
         <div className="mt-8">
           <Link
             to="/"
-            className="inline-block bg-primary hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md"
+            className="inline-block bg-rich-teal/75 hover:bg-opacity-90 hover:bg-rich-teal/25 hover:scale-97 text-deep-blue font-medium font-[montserrat] px-6 py-3 rounded-md transition-all"
           >
             Go back home
           </Link>

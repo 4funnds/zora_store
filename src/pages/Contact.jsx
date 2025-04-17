@@ -29,7 +29,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-12 mt-8 bg-beige/50">
       <Helmet>
         <title>Contact Us | Zora Fashion</title>
         <meta name="description" content="Get in touch with Zora Fashion team for inquiries and collaborations" />
@@ -41,10 +41,10 @@ const Contact = () => {
         transition={{ duration: 0.5 }}
         className="max-w-4xl mx-auto"
       >
-        <h1 className="text-3xl md:text-4xl font-bold font-sora text-secondary mb-2 text-center">
+        <h1 className="text-3xl md:text-4xl font-bold font-[sora] text-deep-blue mb-2 text-center">
           Contact Us
         </h1>
-        <p className="text-gray-600 text-center mb-12">
+        <p className="text-deep-blue font-[montserrat] text-center mb-12">
           Have questions or want to collaborate? We'd love to hear from you.
         </p>
 
@@ -75,7 +75,7 @@ const Contact = () => {
             </p>
             <button
               onClick={() => setSubmitSuccess(false)}
-              className="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium"
+              className="mt-4 inline-block bg-green-500 hover:bg-green-600 text-beige px-4 py-2 rounded-md text-sm font-medium"
             >
               Send Another Message
             </button>
@@ -83,12 +83,12 @@ const Contact = () => {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-xl font-bold font-sora text-secondary mb-4">
+              <h2 className="text-xl font-bold font-[sora] text-deep-blue mb-4">
                 Send Us a Message
               </h2>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-secondary mb-1">
+                  <label htmlFor="name" className="block text-sm font-medium font-[montserrat] text-deep-blue mb-1">
                     Your Name
                   </label>
                   <input
@@ -98,11 +98,11 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
+                    className="w-full px-4 py-2 border border-deep-blue rounded-md focus:ring-rich-teal/75 focus:border-rich-teal/25 transition-all"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-secondary mb-1">
+                  <label htmlFor="email" className="block text-sm font-medium font-[montserrat] text-deep-blue mb-1">
                     Email Address
                   </label>
                   <input
@@ -112,11 +112,11 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
+                    className="w-full px-4 py-2 border border-deep-blue rounded-md focus:ring-rich-teal/75 focus:border-rich-teal/25 transition-all"
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-secondary mb-1">
+                  <label htmlFor="message" className="block text-sm font-medium font-[montserrat] text-deep-blue mb-1">
                     Message
                   </label>
                   <textarea
@@ -126,42 +126,42 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
+                    className="w-full px-4 py-2 border border-deep-blue rounded-md focus:ring-rich-teal/75 focus:border-rich-teal/25 transition-all"
                   />
                 </div>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-primary hover:bg-opacity-90 text-white font-medium py-3 px-6 rounded-md disabled:opacity-70"
+                  className="bg-medium-beige hover:bg-opacity-90 hover:bg-warm-terracotta/50 text-deep-blue font-[montserrat] font-semibold py-3 px-6 rounded-md transition-all disabled:opacity-70"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </div>
             <div>
-              <h2 className="text-xl font-bold font-sora text-secondary mb-4">
+              <h2 className="text-xl font-bold font-[sora] text-deep-blue mb-4">
                 Contact Information
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-sm font-medium text-secondary mb-1">Email</h3>
-                  <p className="text-gray-600">hello@zora-fashion.com</p>
+                  <h3 className="text-sm font-semibold font-[montserrat] text-deep-blue mb-1">Email</h3>
+                  <p className="text-deep-blue">marketing@zora.com</p>
                 </div>
                 <div>
-                  <h3 className="text-sm font-medium text-secondary mb-1">Phone</h3>
-                  <p className="text-gray-600">+62 21 1234 5678</p>
+                  <h3 className="text-sm font-semibold font-[montserrat] text-deep-blue mb-1">Phone</h3>
+                  <p className="text-deep-blue">+62 21 1234 5678</p>
                 </div>
                 <div>
-                  <h3 className="text-sm font-medium text-secondary mb-1">Address</h3>
-                  <p className="text-gray-600">
+                  <h3 className="text-sm font-semibold font-[montserrat] text-deep-blue mb-1">Address</h3>
+                  <p className="text-deep-blue">
                     Jl. Sudirman No. 123<br />
                     Jakarta Selatan 12190<br />
                     Indonesia
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-sm font-medium text-secondary mb-1">Business Hours</h3>
-                  <p className="text-gray-600">
+                  <h3 className="text-sm font-semibold font-[montserrat] text-deep-blue mb-1">Business Hours</h3>
+                  <p className="text-deep-blue">
                     Monday - Friday: 9:00 AM - 6:00 PM<br />
                     Saturday: 10:00 AM - 4:00 PM
                   </p>

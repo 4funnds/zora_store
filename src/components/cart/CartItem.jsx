@@ -25,28 +25,28 @@ const CartItem = ({ item, onUpdateQuantity, onRemove }) => {
       <div className="ml-4 flex-grow">
         <div className="flex justify-between">
           <div>
-            <Link to={`/products/${item.id}`} className="text-sm font-medium text-secondary hover:text-primary">
+            <Link to={`/products/${item.id}`} className="text-sm font-[montserrat] font-medium text-deep-blue hover:text-warm-terracotta">
               {item.name}
-            </Link>
-            <p className="text-xs text-gray-500 mt-1">Size: {item.selectedSize}</p>
+            </Link> 
+            <p className="text-xs text-deep-blue font-[montserrat] mt-1">Size: {item.selectedSize}</p>
           </div>
-          <p className="text-sm font-medium text-secondary">
+          <p className="text-sm font-semibold font-[montserrat] text-deep-blue">
             IDR {(item.price * item.quantity).toLocaleString()}
           </p>
         </div>
         
         <div className="mt-4 flex items-center justify-between">
-          <div className="flex items-center border border-gray-300 rounded-md">
+          <div className="flex items-center border border-deep-blue rounded-md">
             <button
               onClick={() => handleQuantityChange(quantity - 1)}
-              className="px-3 py-1 text-gray-600 hover:bg-gray-100"
+              className="px-3 py-1 text-deep-blue hover:bg-medium-beige hover:text-warm-terracotta rounded-md"
             >
               -
             </button>
-            <span className="px-3 py-1 text-center">{quantity}</span>
+            <span className="px-3 py-1 border-r border-l text-center">{quantity}</span>
             <button
               onClick={() => handleQuantityChange(quantity + 1)}
-              className="px-3 py-1 text-gray-600 hover:bg-gray-100"
+              className="px-3 py-1 text-deep-blue hover:bg-medium-beige hover:text-warm-terracotta rounded-md"
             >
               +
             </button>
@@ -55,7 +55,7 @@ const CartItem = ({ item, onUpdateQuantity, onRemove }) => {
           <Button 
             variant="text" 
             onClick={() => onRemove(item.id, item.selectedSize)}
-            className="text-red-500 hover:text-red-700"
+            className="text-red-500 hover:text-red-600 font-[sora] font-bold"
           >
             Remove
           </Button>

@@ -1,12 +1,14 @@
-import { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import { Bars3Icon, XMarkIcon, ShoppingBagIcon } from '@heroicons/react/24/outline';
+import { useState, useEffect } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Bars3Icon, XMarkIcon, ShoppingBagIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import CartIcon from '../common/CartIcon';
 import MiniCart from '../cart/MiniCart';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -16,14 +18,28 @@ const Header = () => {
     { name: 'Contact', path: '/contact' },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location]);
+
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4">
+    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-beige shadow-md py-2' : 'bg-beige/90 backdrop-blur-none py-4'}`}>
+      <div className="container mx-auto px-4 py-auto">
         <div className="flex justify-between items-center">
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-secondary"
+            className="md:hidden text-deep-blue"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label= "Toggle menu"
           >
             {isMenuOpen ? (
               <XMarkIcon className="h-6 w-6" />
@@ -33,19 +49,19 @@ const Header = () => {
           </button>
 
           {/* Logo */}
-          <Link to="/" className="text-2xl font-sora font-bold text-primary">
+          <Link to="/" className="text-2xl font-[sora] font-bold text-deep-blue">
             ZORA
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-6">
             {navLinks.map((link) => (
               <NavLink
                 key={link.name}
                 to={link.path}
                 className={({ isActive }) =>
-                  `text-sm font-medium transition-colors hover:text-primary ${
-                    isActive ? 'text-primary' : 'text-secondary'
+                  `text-sm font-[montserrat] font-semibold transition-colors hover:text-warm-terracotta ${
+                    isActive ? 'text-warm-terracotta' : 'text-deep-blue'
                   }`
                 }
               >
@@ -56,25 +72,13 @@ const Header = () => {
 
           {/* Cart and Search */}
           <div className="flex items-center space-x-4">
-            <button className="text-secondary hover:text-primary">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
+            <button className="text-deep-blue hover:text-warm-terracotta">
+              <MagnifyingGlassIcon className='h-5 w-5' />
             </button>
             <button
-              className="relative text-secondary hover:text-primary"
+              className="relative text-deep-blue hover:text-warm-terracotta"
               onClick={() => setIsCartOpen(!isCartOpen)}
+              aria-label='Shopping cart'
             >
               <CartIcon />
             </button>
@@ -92,8 +96,8 @@ const Header = () => {
                   className={({ isActive }) =>
                     `px-3 py-2 rounded-md text-sm font-medium ${
                       isActive
-                        ? 'bg-primary text-white'
-                        : 'text-secondary hover:bg-gray-100'
+                        ? 'bg-custom-yellow text-deep-blue'
+                        : 'text-deep-blue hover:bg-warm-terracotta'
                     }`
                   }
                   onClick={() => setIsMenuOpen(false)}

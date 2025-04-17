@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+@theme {
+    --color-beige: oklch(95% 0.02 85); /* Background and Primary color */
+    --color-deep-blue: oklch(25% 0.05 260); /* Text color */
+    --color-rich-teal: oklch(55% 0.18 200); /* Accent or Button color */
+    --color-medium-beige: oklch(85% 0.04 85); /* Borders/Dividers color */
+    --color-warm-terracotta: oklch(65% 0.12 40); /* Hover states color */
+
+    --color-very-light-gray: oklch(97.5% 0.01 260)
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .font-sora {
+    font-family: 'Sora', sans-serif;
+  }

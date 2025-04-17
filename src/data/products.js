@@ -64,7 +64,7 @@ export const products = [
       "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
     ],
     category: "Tops",
-    colors: ["White", "Black"],
+    colors: ["beige", "Black"],
     sizes: ["M", "L", "XL"],
     rating: 4.6,
     reviewCount: 27,
@@ -147,7 +147,7 @@ export const products = [
     price: 499000,
     originalPrice: 599000,
     images: [
-      "https://images.unsplash.com/photo-1595341595379-cf4077d12ab8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1528054308714-0642e627aadf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     category: "Bottoms",
     colors: ["Black", "Navy"],

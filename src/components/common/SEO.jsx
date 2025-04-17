@@ -4,7 +4,7 @@ const SEO = ({ title, description, keywords, image, url, type = 'website' }) => 
   const siteName = 'Zora Fashion';
   const defaultDescription = 'Discover Indonesian-inspired fashion for the modern entrepreneur at Zora.';
   const defaultKeywords = 'fashion, Indonesian clothing, batik, SME fashion, Zora';
-  const siteUrl = 'https://zora-fashion.com';
+  const siteUrl = 'https://zora.com';
   const defaultImage = '/images/zora-social.jpg';
 
   return (

@@ -7,10 +7,8 @@ const Button = ({
     const baseClasses = 'px-6 py-3 rounded-md font-medium transition-colors duration-200';
     
     const variantClasses = {
-      primary: 'bg-primary hover:bg-opacity-90 text-white',
-      secondary: 'bg-white border border-primary text-primary hover:bg-primary hover:text-white',
-      outline: 'bg-transparent border border-secondary text-secondary hover:bg-secondary hover:text-white',
-      text: 'text-primary hover:text-opacity-80'
+      primary: 'bg-rich-teal/75 hover:bg-opacity-90 hover:bg-rich-teal/35 hover:scale-98 transition-all text-deep-blue',
+      secondary: 'border border-deep-blue text-deep-blue hover:bg-rich-teal/25 hover:scale-98 transtion-all',
     };
   
     return (

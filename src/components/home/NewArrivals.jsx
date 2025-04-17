@@ -6,27 +6,27 @@ const NewArrivals = ({ products }) => {
   const newProducts = products.filter(product => product.isNew);
 
   return (
-    <section className="py-12 md:py-16">
+    <section className="py-12 bg-beige/50 bg-opacity-80 md:py-16">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center mb-8">
           <motion.h2
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-2xl md:text-3xl font-bold font-sora text-secondary"
+            transition={{ duration: 0.7 }}
+            viewport={{ once: false }}
+            className="text-2xl md:text-3xl font-bold font-[sora] text-deep-blue"
           >
             New Arrivals
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: false }}
           >
             <Link
               to="/products?new=true"
-              className="text-primary hover:text-opacity-80 font-medium flex items-center"
+              className="text-deep-blue font-[montserrat] hover:text-opacity-80 hover:text-warm-terracotta font-medium flex items-center"
             >
               View all
               <svg
@@ -46,7 +46,7 @@ const NewArrivals = ({ products }) => {
         </div>
 
         {newProducts.length === 0 ? (
-          <p className="text-center text-gray-500 py-8">
+          <p className="text-center text-deep-blue font-[montserrat] font-semibold py-8">
             No new arrivals at the moment. Check back soon!
           </p>
         ) : (
@@ -56,8 +56,8 @@ const NewArrivals = ({ products }) => {
                 key={product.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.9, delay: index * 0.15 }}
+                viewport={{ once: false }}
               >
                 <ProductCard product={product} />
               </motion.div>

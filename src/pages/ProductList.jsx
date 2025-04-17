@@ -69,7 +69,7 @@ const ProductList = () => {
         description="Browse our collection of Indonesian-inspired fashion"
       />
 
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto mt-12 px-4 py-8">
         <ProductFilters 
           categories={filterOptions.categories}
           colors={filterOptions.colors}
@@ -78,10 +78,10 @@ const ProductList = () => {
 
         {filteredProducts.length === 0 ? (
           <div className="text-center py-12">
-            <h3 className="text-lg font-medium text-secondary mb-2">
+            <h3 className="text-lg font-semibold font-[montserrat] text-deep-blue mb-2">
               No products found
             </h3>
-            <p className="text-gray-600">
+            <p className="text-deep-blue">
               Try adjusting your filters
             </p>
           </div>

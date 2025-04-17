@@ -1,4 +1,4 @@
-import { CartProvider, useCart } from '../../hooks/useCart';
+import { useCart } from '../../hooks/useCart';
 
 const CartIcon = () => {
   const { cartCount } = useCart();
@@ -20,7 +20,7 @@ const CartIcon = () => {
         />
       </svg>
       {cartCount > 0 && (
-        <span className="absolute -top-2 -right-2 bg-primary text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+        <span className="absolute -top-2 -right-2 bg-beige text-deep-blue text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
           {cartCount}
         </span>
       )}

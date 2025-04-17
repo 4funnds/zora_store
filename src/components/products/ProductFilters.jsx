@@ -46,7 +46,7 @@ const ProductFilters = ({ categories, colors, priceRange }) => {
       {/* Mobile filter button */}
       <button
         type="button"
-        className="md:hidden flex items-center text-sm font-medium text-secondary mb-4"
+        className="md:hidden flex items-center text-sm font-medium text-deep-blue mb-4"
         onClick={() => setIsMobileFiltersOpen(true)}
       >
         <FunnelIcon className="h-5 w-5 mr-2" />
@@ -56,18 +56,18 @@ const ProductFilters = ({ categories, colors, priceRange }) => {
       <div className="relative">
         {/* Mobile filter dialog */}
         {isMobileFiltersOpen && (
-          <div className="fixed inset-0 z-50 overflow-y-auto p-4 bg-black bg-opacity-50 md:hidden">
-            <div className="bg-white rounded-lg shadow-xl p-6 max-w-xs mx-auto">
+          <div className="fixed inset-0 z-50 overflow-y-auto p-4 bg-transparent md:hidden">
+            <div className="bg-beige rounded-lg shadow-xl p-6 max-w-xs mx-auto">
               <div className="flex justify-between items-center mb-4">
-                <h3 className="text-lg font-medium">Filters</h3>
+                <h3 className="text-lg font-[sora] font-bold text-deep-blue">Filters</h3>
                 <button
                   onClick={() => setIsMobileFiltersOpen(false)}
-                  className="text-gray-400 hover:text-gray-500"
+                  className="text-deep-blue font-[montserrat] hover:text-warm-terracotta"
                 >
                   <XMarkIcon className="h-6 w-6" />
                 </button>
               </div>
-              <div className="space-y-6">
+              <div className="space-y-8 text-deep-blue font-[montserrat]">
                 <FilterSection
                   title="Category"
                   options={categories}
@@ -94,13 +94,13 @@ const ProductFilters = ({ categories, colors, priceRange }) => {
               <div className="mt-6 flex justify-between">
                 <button
                   onClick={clearFilters}
-                  className="text-sm font-medium text-primary hover:text-opacity-80"
+                  className="text-sm font-medium font-[montserrat] text-deep-blue hover:text-warm-terracotta transition-colors"
                 >
                   Clear all
                 </button>
                 <button
                   onClick={() => setIsMobileFiltersOpen(false)}
-                  className="px-4 py-2 bg-primary text-white rounded-md text-sm font-medium"
+                  className="px-4 py-2 bg-rich-teal/50 text-deep-blue font-[montserrat] font-semibold rounded-md text-sm hover:text-warm-terracotta hover:font-extrabold transition-all"
                 >
                   Apply
                 </button>
@@ -110,8 +110,8 @@ const ProductFilters = ({ categories, colors, priceRange }) => {
         )}
 
         {/* Desktop filters */}
-        <div className="hidden md:flex justify-between items-center border-b border-gray-200 pb-4">
-          <div className="flex space-x-6">
+        <div className="hidden md:flex justify-between items-center border-b border-medium-beige pb-4">
+          <div className="flex space-x-6 font-[montserrat] text-deep-blue">
             <FilterSection
               title="Category"
               options={categories}
@@ -167,7 +167,7 @@ const ProductFilters = ({ categories, colors, priceRange }) => {
           )}
           <button
             onClick={clearFilters}
-            className="text-sm font-medium text-primary hover:text-opacity-80"
+            className="text-sm font-medium text-deep-blue hover:text-opacity-80 hover:text-warm-terracotta"
           >
             Clear all
           </button>
@@ -182,7 +182,7 @@ const FilterSection = ({ title, options, selected, onChange }) => {
     <div className="relative">
       <details className="group [&_summary::-webkit-details-marker]:hidden">
         <summary className="flex items-center justify-between cursor-pointer text-sm">
-          <span className="font-medium text-secondary">{title}</span>
+          <span className="font-medium text-deep-blue">{title}</span>
           <span className="transition group-open:-rotate-180">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -198,7 +198,7 @@ const FilterSection = ({ title, options, selected, onChange }) => {
             </svg>
           </span>
         </summary>
-        <div className="absolute z-10 mt-2 bg-white border border-gray-200 rounded-md shadow-lg w-40">
+        <div className="absolute z-10 mt-2 bg-beige border-2 border-medium-beige rounded-md shadow-lg w-40">
           <div className="p-2 space-y-2">
             {options.map((option) => (
               <label key={option} className="flex items-center space-x-2">
@@ -207,7 +207,7 @@ const FilterSection = ({ title, options, selected, onChange }) => {
                   name={title.toLowerCase()}
                   checked={selected === option}
                   onChange={() => onChange(option)}
-                  className="rounded text-primary focus:ring-primary"
+                  className="rounded text-deep-blue focus:ring-rich-teal"
                 />
                 <span className="text-sm">{option}</span>
               </label>
@@ -232,7 +232,7 @@ const PriceFilter = ({ priceRange, minPrice, maxPrice, onChange }) => {
     <div className="relative">
       <details className="group [&_summary::-webkit-details-marker]:hidden">
         <summary className="flex items-center justify-between cursor-pointer text-sm">
-          <span className="font-medium text-secondary">Price</span>
+          <span className="font-medium text-deep-blue">Price</span>
           <span className="transition group-open:-rotate-180">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -248,16 +248,16 @@ const PriceFilter = ({ priceRange, minPrice, maxPrice, onChange }) => {
             </svg>
           </span>
         </summary>
-        <div className="absolute z-10 mt-2 bg-white border border-gray-200 rounded-md shadow-lg w-64 p-4">
+        <div className="absolute z-10 mt-2 bg-beige border-2 border-medium-beige rounded-md shadow-lg w-64 p-4">
           <div className="space-y-4">
             <div className="flex items-center justify-between space-x-4">
               <div>
-                <label htmlFor="minPrice" className="block text-sm text-gray-700 mb-1">
+                <label htmlFor="minPrice" className="block text-sm text-deep-blue font-[montserrat] mb-1">
                   Min
                 </label>
-                <div className="relative rounded-md shadow-sm">
+                <div className="relative bg-warm-terracotta/25 rounded-md shadow-sm">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <span className="text-gray-500 sm:text-sm">IDR</span>
+                    <span className="text-deep-blue sm:text-sm">IDR</span>
                   </div>
                   <input
                     type="number"
@@ -267,18 +267,18 @@ const PriceFilter = ({ priceRange, minPrice, maxPrice, onChange }) => {
                     onChange={(e) => setLocalMin(e.target.value)}
                     min="0"
                     max={priceRange.max}
-                    className="block w-full pl-12 pr-12 py-2 border-gray-300 rounded-md focus:ring-primary focus:border-primary sm:text-sm"
+                    className="block w-full pl-12 pr-12 py-2 border-medium-beige rounded-md focus:ring-rich-teal focus:border-rich-teal sm:text-s"
                     placeholder={priceRange.min}
                   />
                 </div>
               </div>
               <div>
-                <label htmlFor="maxPrice" className="block text-sm text-gray-700 mb-1">
+                <label htmlFor="maxPrice" className="block text-sm text-deep-blue mb-1">
                   Max
                 </label>
-                <div className="relative rounded-md shadow-sm">
+                <div className="relative bg-warm-terracotta/25 rounded-md shadow-sm">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <span className="text-gray-500 sm:text-sm">IDR</span>
+                    <span className="text-deep-blue sm:text-sm">IDR</span>
                   </div>
                   <input
                     type="number"
@@ -288,7 +288,7 @@ const PriceFilter = ({ priceRange, minPrice, maxPrice, onChange }) => {
                     onChange={(e) => setLocalMax(e.target.value)}
                     min="0"
                     max={priceRange.max}
-                    className="block w-full pl-12 pr-12 py-2 border-gray-300 rounded-md focus:ring-primary focus:border-primary sm:text-sm"
+                    className="block w-full pl-12 pr-12 py-2 border-medium-beige rounded-md focus:ring-rich-teal focus:border-rich-teal sm:text-s"
                     placeholder={priceRange.max}
                   />
                 </div>
@@ -296,7 +296,7 @@ const PriceFilter = ({ priceRange, minPrice, maxPrice, onChange }) => {
             </div>
             <button
               onClick={handleApply}
-              className="w-full bg-primary text-white py-2 px-4 rounded-md text-sm font-medium hover:bg-opacity-90"
+              className="w-full bg-medium-beige text-deep-blue py-2 px-4 rounded-md text-sm font-medium hover:bg-opacity-90 hover:bg-warm-terracotta/25 transition-colors"
             >
               Apply
             </button>
@@ -317,7 +317,7 @@ const SortFilter = ({ value, onChange }) => {
 
   return (
     <div className="flex items-center">
-      <label htmlFor="sort" className="text-sm font-medium text-secondary mr-2">
+      <label htmlFor="sort" className="text-sm font-medium text-deep-blue mr-2">
         Sort by:
       </label>
       <select
@@ -325,7 +325,7 @@ const SortFilter = ({ value, onChange }) => {
         name="sort"
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="border-0 text-sm font-medium text-secondary focus:ring-2 focus:ring-primary"
+        className="border-0 text-sm font-medium text-deep-blue focus:ring-2 focus:ring-rich-teal transition-all"
       >
         {options.map((option) => (
           <option key={option.value} value={option.value}>
@@ -339,12 +339,12 @@ const SortFilter = ({ value, onChange }) => {
 
 const ActiveFilter = ({ label, onRemove }) => {
   return (
-    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary bg-opacity-10 text-primary">
+    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs bg-medium-beige bg-opacity-10 text-deep-blue font-[montserrat] font-semibold">
       {label}
       <button
         type="button"
         onClick={onRemove}
-        className="flex-shrink-0 ml-1.5 inline-flex text-primary focus:outline-none"
+        className="flex-shrink-0 ml-1.5 inline-flex text-deep-blue font-[montserrat] font-semibold focus:outline-none"
       >
         <XMarkIcon className="h-3 w-3" />
       </button>

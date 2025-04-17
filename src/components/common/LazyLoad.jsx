@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 const LazyLoad = ({ children, placeholder = null, threshold = 0.1 }) => {
   const [isVisible, setIsVisible] = useState(false);
