@@ -9,7 +9,7 @@ const Cart = () => {
 
   return (
     <div className="container mx-auto mt-12 px-4 py-8">
-      <SEO title="Your Shopping Cart | Zora Fashion" />
+      <SEO title="Your Shopping Cart" />
       
       <h1 className="text-2xl md:text-3xl font-bold font-[sora] text-deep-blue mb-8">Your Cart</h1>
       

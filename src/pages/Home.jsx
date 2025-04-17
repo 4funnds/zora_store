@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <>
       <SEO 
-        title="Zora Fashion | Indonesian Inspired Clothing"
+        title="Indonesian Inspired Clothing"
         description="Discover premium Indonesian fashion"
       />
       <Hero />

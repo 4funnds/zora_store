@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
+import SEO from '../components/common/SEO';
 
 const NotFound = () => {
   return (
+    <>
+    <SEO title='Page Not Found' />
     <div className="min-h-screen flex items-center justify-center bg-beige/50 py-12 px-4 sm:px-6 lg:px-8">
-      <Helmet>
-        <title>Page Not Found | Zora Fashion</title>
-      </Helmet>
       <div className="max-w-md w-full space-y-8 text-center">
         <div>
           <h1 className="text-9xl font-bold text-deep-blue font-[sora]">404</h1>
@@ -25,6 +24,7 @@ const NotFound = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

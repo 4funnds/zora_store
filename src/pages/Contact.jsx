@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Helmet } from 'react-helmet';
+import SEO from "../components/common/SEO";
 import { motion } from 'framer-motion';
 
 const Contact = () => {
@@ -29,11 +29,9 @@ const Contact = () => {
   };
 
   return (
+    <>
     <div className="container mx-auto px-4 py-12 mt-8 bg-beige/50">
-      <Helmet>
-        <title>Contact Us | Zora Fashion</title>
-        <meta name="description" content="Get in touch with Zora Fashion team for inquiries and collaborations" />
-      </Helmet>
+    <SEO title='Contact Us' description='Get in touch with Zora Fashion team for inquiries and collaborations' />
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -172,6 +170,7 @@ const Contact = () => {
         )}
       </motion.div>
     </div>
+    </>
   );
 };
 

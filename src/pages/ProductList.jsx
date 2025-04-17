@@ -65,7 +65,7 @@ const ProductList = () => {
   return (
     <>
       <SEO 
-        title="Shop | Zora Fashion"
+        title="Shop"
         description="Browse our collection of Indonesian-inspired fashion"
       />
 

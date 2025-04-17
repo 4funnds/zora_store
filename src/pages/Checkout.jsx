@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Helmet } from 'react-helmet';
+import SEO from '../components/common/SEO';
 import { Link } from 'react-router-dom';
 import { useCart } from '../hooks/useCart';
 
@@ -55,10 +55,9 @@ const Checkout = () => {
   }
 
   return (
+    <>
+    <SEO title='Checkout' />
     <div className="container mx-auto mt-12 px-4 py-8">
-      <Helmet>
-        <title>Checkout | Zora Fashion</title>
-      </Helmet>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="lg:col-span-1">
@@ -254,6 +253,7 @@ const Checkout = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -1,13 +1,11 @@
-import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
+import SEO from '../components/common/SEO'
 
 const About = () => {
   return (
+    <>
+    <SEO title='About Us' description='Learn about Zora Fashion and our mission to bring Indonesian-inspired fashion to SMEs'/>
     <div className="container mx-auto px-4 py-12 bg-beige/50">
-      <Helmet>
-        <title>About Us | Zora Fashion</title>
-        <meta name="description" content="Learn about Zora Fashion and our mission to bring Indonesian-inspired fashion to SMEs" />
-      </Helmet>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -100,6 +98,7 @@ const About = () => {
         </div>
       </motion.div>
     </div>
+    </>
   );
 };
 
