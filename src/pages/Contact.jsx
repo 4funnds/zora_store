@@ -30,8 +30,8 @@ const Contact = () => {
 
   return (
     <>
-    <div className="container mx-auto px-4 py-12 mt-8 bg-beige/50">
     <SEO title='Contact Us' description='Get in touch with Zora Fashion team for inquiries and collaborations' />
+    <div className="container mx-auto px-4 py-12 mt-8 bg-beige/50">
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}

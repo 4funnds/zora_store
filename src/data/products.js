@@ -5,7 +5,7 @@ export const products = [
     price: 349000,
     originalPrice: 499000,
     images: [
-      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1562571437-2f40b6baa3c6?q=80&w=1033&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     category: "Tops",
     colors: ["Red", "Blue"],
@@ -22,7 +22,7 @@ export const products = [
     name: "Traditional Kebaya",
     price: 599000,
     images: [
-      "https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+      "https://airbooking.vn/wp-content/uploads/2016/08/kebaya-indo.jpg",
     ],
     category: "Dresses",
     colors: ["Black", "White"],
@@ -39,7 +39,7 @@ export const products = [
     name: "Batik Sarong Skirt",
     price: 399000,
     images: [
-      "https://images.unsplash.com/photo-1554412933-514a83d2f3c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+      "https://utopiaapparels.com/5484-large_default/Yenni-Batik-Patchwork-Sarong.jpg",
     ],
     category: "Bottoms",
     colors: ["Green", "Blue"],
@@ -61,7 +61,7 @@ export const products = [
     price: 449000,
     originalPrice: 549000,
     images: [
-      "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+      "https://i.pinimg.com/originals/4d/af/04/4daf0453b006cb0a327757e488e18380.jpg",
     ],
     category: "Tops",
     colors: ["beige", "Black"],
@@ -78,7 +78,7 @@ export const products = [
     name: "Handwoven Scarf",
     price: 199000,
     images: [
-      "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+      "https://i.etsystatic.com/21300693/r/il/85e7ec/2030556568/il_1140xN.2030556568_46eg.jpg",
     ],
     category: "Accessories",
     colors: ["Red", "Green", "Blue"],
@@ -95,7 +95,7 @@ export const products = [
     name: "Batik Maxi Dress",
     price: 699000,
     images: [
-      "https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+      "https://i.etsystatic.com/17142363/r/il/c81d10/4604031558/il_570xN.4604031558_aq62.jpg",
     ],
     category: "Dresses",
     colors: ["Blue", "Black"],
@@ -112,7 +112,7 @@ export const products = [
     name: "Casual Batik T-Shirt",
     price: 249000,
     images: [
-      "https://images.unsplash.com/photo-1527719327859-c6ce80353573?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+      "https://tse1.mm.bing.net/th?id=OIP.bTCwOUbp_0mhWR1snduFQgHaHa&pid=Api&P=0&h=1440",
     ],
     category: "Tops",
     colors: ["White", "Gray"],
@@ -129,7 +129,7 @@ export const products = [
     name: "Traditional Headband",
     price: 129000,
     images: [
-      "https://images.unsplash.com/photo-1617137968427-85924c800a22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+      "https://thumbs.dreamstime.com/z/indonesian-sundanese-traditional-headband-blue-isolated-white-background-231279285.jpg?w=768",
     ],
     category: "Accessories",
     colors: ["Red", "Gold"],
@@ -147,7 +147,7 @@ export const products = [
     price: 499000,
     originalPrice: 599000,
     images: [
-      "https://images.unsplash.com/photo-1528054308714-0642e627aadf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://tse4.mm.bing.net/th?id=OIP.pXFPYFga1zRdRnE2mKiPagHaH6&pid=Api&P=0&h=1440",
     ],
     category: "Bottoms",
     colors: ["Black", "Navy"],
@@ -164,7 +164,7 @@ export const products = [
     name: "Elegant Batik Blazer",
     price: 899000,
     images: [
-      "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+      "https://i.pinimg.com/originals/40/ee/58/40ee584631638f9951d46de30259ada6.jpg",
     ],
     category: "Outerwear",
     colors: ["Black", "Navy"],
