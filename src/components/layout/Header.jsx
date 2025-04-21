@@ -1,14 +1,17 @@
 import { useState, useEffect } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Bars3Icon, XMarkIcon, ShoppingBagIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { Bars3Icon, XMarkIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import CartIcon from '../common/CartIcon';
 import MiniCart from '../cart/MiniCart';
+import SearchModal from '../search/SearchModal';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -30,6 +33,11 @@ const Header = () => {
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location]);
+
+  const handleSearch = (searchTerm) => {
+    navigate(`/products?search=${encodeURIComponent(searchTerm)}`);
+    setIsSearchOpen(false);
+  };
 
   return (
     <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-beige shadow-md py-2' : 'bg-beige/90 backdrop-blur-none py-4'}`}>
@@ -72,7 +80,11 @@ const Header = () => {
 
           {/* Cart and Search */}
           <div className="flex items-center space-x-4">
-            <button className="text-deep-blue hover:text-warm-terracotta">
+            <button 
+              className="text-deep-blue hover:text-warm-terracotta"
+              onClick={() => setIsSearchOpen(!isSearchOpen)}
+              aria-label="Search products"
+            >
               <MagnifyingGlassIcon className='h-5 w-5' />
             </button>
             <button
@@ -112,6 +124,13 @@ const Header = () => {
 
       {/* Mini Cart */}
       <MiniCart isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
+
+      {/* Search Modal */}
+      <SearchModal 
+        isOpen={isSearchOpen} 
+        onClose={() => setIsSearchOpen(false)}
+        onSearch={handleSearch}
+      />
     </header>
   );
 };

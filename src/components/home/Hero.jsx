@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="relative overflow-hidden h-[500px] md:h-[600px] lg:h-[700px]">
       {/* Background Image with optimized loading */}
       <div 
-        className="absolute inset-0 bg-[url('/images/hero-mobile.jpg')] md:bg-[url('https://images.unsplash.com/photo-1545320062-58012686fe41?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center z-0"
+        className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1545320062-58012686fe41?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center z-0"
       >
         {/* Blurred low-res placeholder */}
         {/* <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1545320062-58012686fe41?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center blur-sm"></div> */}
