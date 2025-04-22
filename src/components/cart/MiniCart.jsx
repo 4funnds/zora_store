@@ -6,7 +6,7 @@ import { useCart } from '../../hooks/useCart';
 import CartItem from './CartItem';
 
 const MiniCart = ({ isOpen, onClose }) => {
-  const { cart, cartTotal, cartCount } = useCart();
+  const { cart, cartTotal, cartCount, removeFromCart, updateQuantity } = useCart();
   const [isVisible, setIsVisible] = useState(isOpen);
 
   useEffect(() => {
@@ -66,7 +66,12 @@ const MiniCart = ({ isOpen, onClose }) => {
               ) : (
                 <ul className="divide-y divide-warm-terracotta">
                   {cart.map((item) => (
-                    <CartItem key={`${item.id}-${item.selectedSize}`} item={item} />
+                    <CartItem
+                      key={`${item.id}-${item.selectedSize}`}
+                      item={item}
+                      onUpdateQuantity={updateQuantity}
+                      onRemove={removeFromCart}
+                    />
                   ))}
                 </ul>
               )}

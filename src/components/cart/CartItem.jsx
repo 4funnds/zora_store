@@ -12,6 +12,10 @@ const CartItem = ({ item, onUpdateQuantity, onRemove }) => {
     onUpdateQuantity(item.id, item.selectedSize, updatedQuantity);
   };
 
+  const handleRemove = () => {
+    onRemove(item.id, item.selectedSize);
+  };
+
   return (
     <div className="p-4 flex">
       <Link to={`/products/${item.id}`} className="flex-shrink-0 w-20 h-20">
@@ -54,7 +58,7 @@ const CartItem = ({ item, onUpdateQuantity, onRemove }) => {
           
           <Button 
             variant="text" 
-            onClick={() => onRemove(item.id, item.selectedSize)}
+            onClick={handleRemove}
             className="text-red-500 hover:text-red-600 font-[sora] font-bold"
           >
             Remove

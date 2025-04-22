@@ -36,16 +36,16 @@ const Checkout = () => {
 
   if (orderSuccess) {
     return (
-      <div className="container mx-auto px-4 py-12 text-center">
+      <div className="container mx-auto mt-16 px-4 py-12 text-center">
         <div className="max-w-md mx-auto bg-beige p-8 rounded-lg shadow-md">
           <svg className="h-16 w-16 text-green-500 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
-          <h2 className="text-2xl font-bold text-deep-blue mb-2">Order Confirmed!</h2>
-          <p className="text-gray-600 mb-6">Thank you for your purchase. We've sent a confirmation to your email.</p>
+          <h2 className="text-2xl font-bold font-[sora] text-deep-blue mb-2">Order Confirmed!</h2>
+          <p className="text-deep-blue font-[montserrat] mb-6">Thank you for your purchase. We've sent a confirmation to your email.</p>
           <Link
             to="/products"
-            className="inline-block bg-beige hover:bg-opacity-90 text-beige font-medium px-6 py-3 rounded-md"
+            className="inline-block bg-medium-beige hover:bg-opacity-90 hover:scale-97 text-deep-blue font-medium px-6 py-3 transition-all font-[montserrat] rounded-md"
           >
             Continue Shopping
           </Link>
