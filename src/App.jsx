@@ -11,6 +11,7 @@ import NotFound from './pages/NotFound';
 import ErrorBoundary from './components/ErrorBoundaries';
 import Collections from './pages/Collections';
 import { products } from './data/products';
+import { Analytics } from '@vercel/analytics/next';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
+      <Analytics />
     </Router>
     </ErrorBoundary>
   );
